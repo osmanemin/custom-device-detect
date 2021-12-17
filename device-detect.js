@@ -1,5 +1,5 @@
 module.exports = (userAgent, myCustomUserAgent = "") => {
-  const mobileDevices = require("./devices.js");
+  const mobileAndBotDevices = require("./devices.js");
 
   if (typeof userAgent !== "string") return;
 
@@ -9,21 +9,19 @@ module.exports = (userAgent, myCustomUserAgent = "") => {
     isBot: false,
     isCustomDevice: false,
   };
-  let currentDevice = "";
 
-  mobileDevices.find((device) => {
-    const finedDevice = device.deviceRegex.find((regex) => {
-      if (userAgent.match(regex)) {
-        currentDevice = device.name;
-        return currentDevice;
-      }
+  const currentDevice = mobileAndBotDevices.find((device) => {
+    const finedDevice = device.deviceRegexes.find((regex) => {
+      if (userAgent.match(regex)) return true;
     });
     return finedDevice;
   });
 
   if (userAgent === myCustomUserAgent) deviceType.isCustomDevice = true;
-  else if (currentDevice.match(/mobile|tablet/)) deviceType.isMobile = true;
+  else if (currentDevice && currentDevice.name.match(/mobile|tablet/)) deviceType.isMobile = true;
   else deviceType.isDesktop = true;
-  if (currentDevice.match(/bot/)) deviceType.isBot = true;
+
+  if (currentDevice && currentDevice.name.match(/bot/)) deviceType.isBot = true;
+  
   return deviceType;
 };

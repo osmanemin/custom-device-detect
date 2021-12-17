@@ -1,18 +1,16 @@
 module.exports = [
   {
     name: "mobile-bot",
-    deviceRegex: [
+    deviceRegexes: [
       /googlebot-mobile/i,
       /\+http:\/\/www.google.com\/bot.html/,
-      /mobile/i,
       /http:\/\/www.google.com\/mobile\/adsbot.html/,
-      /(iPhone|Windows Phone)/,
       /bingbot/,
     ],
   },
   {
     name: "bot",
-    deviceRegex: [
+    deviceRegexes: [
       /(ads|google|bing|msn|yandex|baidu|ro|career|seznam|)bot/i,
       /(baidu|jike|symantec)spider/i,
       /scanner/i,
@@ -21,47 +19,47 @@ module.exports = [
   },
   {
     name: "tablet-ipad",
-    deviceRegex: [/ipad/i],
+    deviceRegexes: [/ipad/i],
   },
   {
     name: "mobile-iphone",
-    deviceRegex: [/ip(hone|od)/i],
+    deviceRegexes: [/ip(hone|od)/i],
   },
   {
     name: "mobile-android",
-    deviceRegex: [/android.*(mobile|mini)/i],
+    deviceRegexes: [/android.*(mobile|mini)/i],
   },
   {
     name: "tablet-android",
-    deviceRegex: [/android 3/i, /android/i],
+    deviceRegexes: [/android 3/i, /android/i],
   },
   {
     name: "tablet-rim",
-    deviceRegex: [/PlayBook; U; RIM Tablet/i],
+    deviceRegexes: [/PlayBook; U; RIM Tablet/i],
   },
   {
     name: "tablet-hp",
-    deviceRegex: [/hp-tablet.*TouchPad/i],
+    deviceRegexes: [/hp-tablet.*TouchPad/i],
   },
   {
     name: "tablet-kindle",
-    deviceRegex: [/Kindle/i],
+    deviceRegexes: [/Kindle/i],
   },
   {
     name: "tablet-microsoft",
-    deviceRegex: [/Touch.+Tablet PC/, /Windows NT [0-9.]+; ARM;/],
+    deviceRegexes: [/Touch.+Tablet PC/, /Windows NT [0-9.]+; ARM;/],
   },
   {
     name: "tablet",
-    deviceRegex: [/tablet/i],
+    deviceRegexes: [/tablet/i],
   },
   {
     name: "mobile-firefoxos",
-    deviceRegex: [/Mobile.+Firefox/],
+    deviceRegexes: [/Mobile.+Firefox/],
   },
   {
     name: "mobile-smartphone",
-    deviceRegex: [
+    deviceRegexes: [
       /^HTC/,
       /Fennec/,
       /IEMobile/,
@@ -73,7 +71,7 @@ module.exports = [
   },
   {
     name: "mobile-generic",
-    deviceRegex: [
+    deviceRegexes: [
       /symbian/i,
       /sonyericsson/i,
       /nokia/i,
