@@ -46,7 +46,7 @@ console.log(parsedUserAgent);
   }*/
 ```
 
-Google bots sometimes can be mobile and sometimes desktop.<br/>
+Google bots sometimes can be mobile or desktop.<br/>
 **Example** - user agent bot detection:
 
 ```js
