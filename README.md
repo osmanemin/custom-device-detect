@@ -1,7 +1,7 @@
 # Custom Device Detect
 
 custom-device-detect is a user agent parser.<br/>
-custom-device-detect will pars your custom user agent and detect your device.<br/>
+custom-device-detect parse your custom user agent and detect your device.<br/>
 
 ## Installation
 
