@@ -11,10 +11,10 @@ module.exports = (userAgent, myCustomUserAgent = "") => {
   };
 
   const currentDevice = mobileAndBotDevices.find((device) => {
-    const finedDevice = device.deviceRegexes.find((regex) => {
-      if (userAgent.match(regex)) return true;
+    const findedDevice = device.deviceRegexes.find((regex) => {
+      return userAgent.match(regex);
     });
-    return finedDevice;
+    return findedDevice;
   });
 
   if (userAgent === myCustomUserAgent) deviceType.isCustomDevice = true;
@@ -22,6 +22,6 @@ module.exports = (userAgent, myCustomUserAgent = "") => {
   else deviceType.isDesktop = true;
 
   if (currentDevice && currentDevice.name.match(/bot/)) deviceType.isBot = true;
-  
+
   return deviceType;
 };
