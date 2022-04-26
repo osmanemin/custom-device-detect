@@ -2,9 +2,11 @@
   "name": "custom-device-detect",
   "version": "1.0.3",
   "description": "custom-device-detect is a user agent parser. custom-device-detect will pars your custom user agent and detect your device.",
-  "main": "device-detect.js",
+  "main": "src/device-detect.js",
+  "types": "src/device-detect.d.ts",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,7 @@
   },
   "homepage": "https://github.com/osmanemin/custom-device-detect#readme",
   "devDependencies": {
-    "mocha": "^9.2.2"
+    "mocha": "^9.2.2",
+    "typescript": "^4.6.3"
   }
 }
