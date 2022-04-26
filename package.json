@@ -1,6 +1,6 @@
 {
   "name": "custom-device-detect",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "custom-device-detect is a user agent parser. custom-device-detect will pars your custom user agent and detect your device.",
   "main": "src/device-detect.js",
   "types": "src/device-detect.d.ts",
