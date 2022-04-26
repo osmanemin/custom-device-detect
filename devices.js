@@ -14,7 +14,13 @@ module.exports = [
       /(ads|google|bing|msn|yandex|baidu|ro|career|seznam|)bot/i,
       /(baidu|jike|symantec)spider/i,
       /scanner/i,
-      /(web)crawler/i,
+      /(web|criteo-)crawler/i,
+      /Dispatch/i,
+      /Mediapartners-Google/i,
+      /AhrefsBot/i,
+      /service-fetcher/i,
+      /kube/i,
+      /thetradedesk/i
     ],
   },
   {
